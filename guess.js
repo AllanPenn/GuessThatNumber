@@ -83,6 +83,23 @@ while (restartGame){
       guess = prompt(`Too high. You have ${attempts} attempt(s) left`);
     }
   }
+  playAgain = prompt(`Would you like to play again? Y for yes. N for no.`);
 
-  break;
+  // Loop continues until user submits a valid response
+  while (true){
+    // 
+    if (playAgain === "N" || playAgain == "n"){
+      // Alerts the user that the game is over and the game/loop does NOT restart
+      alert("Thanks for playing!");
+      restartGame = false;
+      break;
+
+      // Checks if the user's response is YES (AKA "Y" or "y")
+    } else if (playAgain.toUpperCase() === "Y"){
+      // The game restarts
+      break;
+    } else {
+      playAgain = prompt(`Please enter Y or N`);
+    }
+  }
 }
