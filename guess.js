@@ -19,3 +19,23 @@ let guess;
 
 // For storing user's response to play again or not play again
 let playAgain;
+
+// Starting alert message
+alert(`Welcome to "GUESS THAT NUMBER!" Please click "OK" to start the game.`);
+
+// Game restarts as long as restartGame has value of true
+while (restartGame){
+  // Asks user to enter a number to set the upper bound for the random number
+  rangeNum = prompt(`Please enter a maaximum number for the range:`);
+
+  // Using parseInt to attempt to convert the user's response into a number value.
+  rangeNum = parseInt(rangeNum);
+
+  // Verifies the user's entry for the range number is a number greater than zero
+  while (!rangeNum || rangeNum < 1){
+    rangeNum = prompt(enterNumText);
+    rangeNum = parseInt(rangeNum);
+  }
+
+  break;
+}
