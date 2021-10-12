@@ -40,5 +40,13 @@ while (restartGame){
   // Creates the random number using the range number entered by the user
   randomNum = Math.floor(Math.random() * rangeNum) + 1;
 
+  // Prompts user to enter a number of attempts allowed
+  attempts = parseInt(prompt(`Please enter a number of attempts allowed:`));
+
+  // Verifies the users entry for a number of attempts allowed is a number greater than zero
+  while (!attempts || attempts < 1){
+    attempts = parseInt(prompt(enterNumText));
+  }
+
   break;
 }
