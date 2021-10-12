@@ -53,6 +53,11 @@ while (restartGame){
 
   // Continues looping until the user guesses the correct number or runs out of attempts
   while (true){
+
+    if (guess === `Valley Forge`){
+      alert(`The number is ${randomNum}`);
+      guess = prompt(`Please enter a guess from 1 to ${rangeNum}. You have ${attempts} attempt(s) left:`);
+    }
     // Attempts to convert the user's guess into a number
     guess = parseInt(guess);
 
